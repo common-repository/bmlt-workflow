@@ -1,0 +1,261 @@
+/**
+ * Copyright (C) 2022 nigel.bmlt@gmail.com
+ * 
+ * This file is part of bmlt-workflow.
+ * 
+ * bmlt-workflow is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * bmlt-workflow is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with bmlt-workflow.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.bmltwf_info_text {
+  padding-left: 15px;
+  background-color: #f8f8f8;
+  border-left: 5px solid lightblue;
+}
+
+.dialog_label {
+  display: block;
+}
+
+.dialog_textarea {
+  display: block;
+}
+
+#bmltwf_quickedit_map {
+  height: 80%;
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, [col] 1fr);
+  grid-template-rows: repeat(2, [row] auto);
+}
+
+.form-grid-top {
+  grid-column: col / span 3;
+  grid-row: row ;
+}
+
+.form-grid-col1 {
+  grid-column: col;
+  grid-row: row 2;
+}
+
+.form-grid-col2{
+  grid-column: col 2 ;
+  grid-row: row 2 ;
+}
+
+.form-grid-col3{
+  grid-column: col 3 ;
+  grid-row: row 2 ;
+}
+
+.form-grid input {
+  line-height: 1.5;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  display: block;
+  width: 100%;
+}
+
+.form-grid select {
+  line-height: 1.5;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  display: block;
+  width: 100%;
+  /* -webkit-appearance: menulist;
+  appearance: menulist; */
+}
+
+.grid-flex-item select {
+  line-height: 1.5;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  display: inline;
+  width: 38%;
+}
+
+.form-grid .bmltwf-changed {
+  background-color: #e7f478;
+}
+
+.select2-selection--multiple.quickedit_format_shared_id_list-select2.bmltwf-changed {
+  background-color: #e7f478;
+}
+
+/* accessibility for close button */
+.select2-container--default .select2-selection--multiple button.select2-selection__choice__remove
+ {
+   color: #000;
+ }
+ 
+.form-grid label {
+  width: 100%;
+  display: block;
+  padding: 10px 5px 5px 2px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.grid-flex-container {
+  display: flex;
+}
+
+.grid-flex-item {
+  flex-grow: 1;
+  /* height: 100px; */
+}
+
+.grid-flex-item input {
+  width: 90%;
+}
+
+.grid-flex-item select {
+  line-height: 1.5;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  display: inline;
+  width: 90%;
+}
+
+.grid-flex-double {
+  flex-grow: 1;
+  height: 100px;
+}
+
+.grid-flex-double select {
+  line-height: 1.5;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  display: inline;
+  width: 38%;
+}
+
+
+.grow-wrap {
+  display: grid;
+}
+
+.grow-wrap::after {
+  content: attr(data-replicated-value) " ";
+  white-space: pre-wrap;
+  visibility: hidden;
+}
+
+.grow-wrap>textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+.grow-wrap>textarea,
+.grow-wrap::after {
+  padding: 0.5rem;
+  font: inherit;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+
+.cell-hdr {
+  background-color: rgb(236, 236, 236);
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.header {
+  width: auto;
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-columns: [h1-start] 1fr [h1-end h2-start] 1fr [h2-end h3-start] 1fr [h3-end h4-start] 1fr [h4-end];
+}
+
+.gridbody {
+  width: auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: [c1k-start] 1fr [c1k-end c1v-start] 1fr [c1v-end c2k-start] 1fr [c2k-end c2v-start] 1fr [c2v-end c3k-start] 1fr [c3k-end c3v-start] 1fr [c3v-end c4k-start] 1fr [c4k-end c4v-start] 1fr [c4v-end];
+/*   grid-template-columns: repeat(4, 25%); */
+/*   grid-auto-rows: 100px; */
+  grid-auto-flow: dense;
+}
+
+.h1 {
+  grid-area: h1;
+}
+
+.h2 {
+  grid-area: h2;
+}
+
+.h3 {
+  grid-area: h3;
+}
+
+.h4 {
+  grid-area: h4;
+}
+
+.c1k {
+  grid-area: auto / c1k / auto / c1k;
+  padding-left: 2px;
+}
+
+.c1v {
+  grid-area: auto / c1v / auto / c1v;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.c2k {
+  grid-area: auto / c2k / auto / c2k;
+  padding-left: 2px;
+
+}
+
+.c2v {
+  grid-area: auto / c2v / auto / c2v;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.c3k {
+  grid-area: auto / c3k / auto / c3k;
+  padding-left: 2px;
+
+}
+
+.c3v {
+  grid-area: auto / c3v / auto / c3v;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.c4k {
+  grid-area: auto / c4k / auto / c4k;
+  padding-left: 2px;
+
+}
+
+.c4v {
+  grid-area: auto / c4v / auto / c4v;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+hr.bmltwf-error-message 
+{
+  border: none;
+}

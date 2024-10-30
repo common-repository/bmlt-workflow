@@ -1,0 +1,84 @@
+/**
+ * Copyright (C) 2022 nigel.bmlt@gmail.com
+ * 
+ * This file is part of bmlt-workflow.
+ * 
+ * bmlt-workflow is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * bmlt-workflow is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with bmlt-workflow.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+table tr:hover > td {
+  background: #fff;
+}
+table th {
+  padding-left: 15px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  width: auto;
+}
+
+table td {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.bmltwf_info_text {
+  padding-left: 15px;
+  background: #fff;
+  border-left: 5px solid lightblue;
+}
+
+label {
+  display: inline-flex;
+  clear: left;
+  width: 150px;
+}
+input {
+  display: inline-flex;
+}
+
+.spinner {
+    float: left;
+}
+
+.bmltwf-center-checkbox {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.grow-wrap {
+  display: grid;
+}
+
+.grow-wrap::after {
+  content: attr(data-replicated-value) " ";
+  white-space: pre-wrap;
+  visibility: hidden;
+}
+
+.grow-wrap>textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+.grow-wrap>textarea,
+.grow-wrap::after {
+  padding: 0.5rem;
+  font: inherit;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+hr.bmltwf-error-message 
+{
+  border: none;
+}
